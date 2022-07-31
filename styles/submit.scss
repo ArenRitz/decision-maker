@@ -1,0 +1,23 @@
+.poll-container {
+  width: 30%;
+  background-color: lightcyan;
+  margin:auto;
+  .sort-container {
+    div {
+      margin-top:0.25rem;
+      margin-bottom:0.25rem;
+      input {
+        background-color: inherit;
+        border: none;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+
+
+
+
+}
