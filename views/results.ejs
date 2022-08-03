@@ -24,6 +24,7 @@
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="/styles/submit.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/result.css" type="text/css" />
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js" integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous"></script>
 
@@ -66,43 +67,50 @@
           </div>
           <div class="col-8">
             <form>
-              <header class='main-content-header'>
-                  Showing vote
+              <header class='main-content-header hed'>
+                <% if (results[0].user_name) { %>
+                  <div class="col-6">
+                    <div class="form-floating mb-3">
+                    <span class="user-name">  Submited by: <%= results[0].user_name %> </span>
+                    </div>
+                  </div>
+                <% } %>
+
+                <div class='col title-container'>
+                  <div class="title-name">
+                      <span> <%= results[0].poll_title %> </span>
+                  </div>
+
+                  <% if (results[0].poll_desc) { %>
+                  <div class="title-description desc">
+                      <p> <%= results[0].poll_desc %> </p>
+                    </div>
+                    <% } %>
+                </div>
+
+
+
               </header>
 
               <div class ="main-content">
                 <main>
-                  <% if (results[0].user_name) { %>
-                    <div class="col-6">
-                      <div class="form-floating mb-3">
-                        Submited by: <%= results[0].user_name %>
-                      </div>
-                    </div>
-                  <% } %>
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= results[0].poll_title %>">
-                    <label for="floatingInput">Poll title</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= results[0].poll_desc %>">
-                    <label for="floatingInput">Poll description</label>
-                  </div>
-                  <div id="choices">
-                    <div class="row">
 
+
+                  <div id="choices">
+                    <div class="row  mb-3">
+                      <% let i = 1; %>
                       <% for (let choice of results) { %>
-                      <div class="col-6">
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= choice.title %>">
-                          <label for="floatingInput">choice title</label>
-                        </div>
+                        <div class='row entry-container'>
+                      <div class="col-6 entry">
+                        <p><%= i %>. &nbsp;&nbsp;&nbsp; <%= choice.title %> </p>
                       </div>
-                      <div class="col-6">
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= choice.description %>">
-                          <label for="floatingInput">choice description</label>
+
+                      <div class="col-6 entry desc">
+                          <p> <%= choice.description %> </p>
                         </div>
-                      </div>
+
+                    </div>
+                      <% i++; %>
                       <% } %>
 
 

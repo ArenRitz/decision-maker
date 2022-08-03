@@ -1,0 +1,53 @@
+.entry-container {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.50);
+  color: black;
+  border: 3px solid rgb(79, 174, 106);
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.35);
+
+  .entry {
+
+    p {
+      margin:1rem;
+    }
+  }
+
+  }
+
+.user-name {
+  font-size: small;
+}
+
+.title-container {
+  color: black;
+  text-align: center;
+  margin-top:1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  .title-name {
+    font-size: xx-large;
+    font-weight: bold;
+    width:auto;
+    border-bottom: 3px solid rgb(83, 198, 115);
+    padding-bottom: 0.5rem;
+  }
+  .title-description {
+    margin-top: 1rem;
+    margin-bottom:1rem;
+  }
+}
+
+
+.desc {
+  color: gray;
+}
+
+
+#hero {
+  margin-top:5rem;
+}
+
