@@ -22,6 +22,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/result.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
@@ -36,6 +37,7 @@
 
   <body style="background-image: url(/images/45-degree-fabric-light.png); background-color: #0d0040;">
     <header id="header" class="d-flex align-items-center header-transparent">
+
       <div class="container-fluid">
 
         <div class="row justify-content-center align-items-center">
@@ -46,10 +48,9 @@
 
             <nav id="navbar" class="navbar">
               <ul>
-                <li><a class="nav-link" href="/">Home</a></li>
-                <li><a class="nav-link active" href="/create">Create Poll</a></li>
+                <li><a class="nav-link" href="/create">Create Poll</a></li>
               </ul>
-              <i class="bi bi-list mobile-nav-toggle"></i>
+
             </nav><!-- .navbar -->
           </div>
         </div>
@@ -59,64 +60,47 @@
 
     <section id="hero" style="background-image: url(/images/45-degree-fabric-light.png); background-color: #0d0040;">
       <div class="jumbotron vertical-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-2">
 
-          </div>
-          <div class="col-8">
-            <form>
+
+
+            <form class="poll-form-container">
               <header class='main-content-header'>
-                View your vote
+                <div class='col title-container'>
+                  <div class="title-name">
+                      <span> <%= poll.title %> </span>
+                  </div>
+
+                  <% if (poll.description) { %>
+                  <div class="title-description desc">
+                      <p> <%= poll.description %> </p>
+                    </div>
+                    <% } %>
+                </div>
+
               </header>
 
               <div class ="main-content">
                 <main>
 
-
-
-
-
-
-
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= poll.title %>">
-                    <label for="floatingInput">Poll title</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= poll.description %>">
-                    <label for="floatingInput">Poll description</label>
-                  </div>
                   <div id="choices">
                     <div class="row">
 
+                      <% let i = 1; %>
                       <% for (let choice of poll.choices) { %>
-                      <div class="col-6">
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= choice.title %>">
-                          <label for="floatingInput">choice title</label>
-                        </div>
+                        <!-- <span class="vote-sum"><%= choice.total_votes %> </span> -->
+                        <div class='row entry-container'>
+                      <div class="col-6 entry">
+                        <p><%= i %>. &nbsp;&nbsp;&nbsp; <%= choice.title %> </p>
                       </div>
-                      <div class="col-6">
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= choice.description %>">
-                          <label for="floatingInput">choice description</label>
-                        </div>
+
+                      <div class="col-5 entry desc">
+                          <p> <%= choice.description %> </p>
                       </div>
-                      <div class="col-6">
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= choice.total_votes %>">
-                          <label for="floatingInput">choice score</label>
-                        </div>
-                      </div>
-                      <br>
-                      <div class="col-6">
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                          <label for="floatingInput"></label>
-                        </div>
-                      </div>
-                      <br>
+
+
+
+                    </div>
+                      <% i++; %>
                       <% } %>
 
 
@@ -127,14 +111,14 @@
                 </main>
               </div>
               <footer class='main-content-footer'>
-                <p> Thanks for your vote! </p>
+                <p> Thanks for using Decision Maker! </p>
               </footer>
             </form>
-          </div>
 
-        </div>
 
-      </div>
+
+
+
       </div>
     </section>
 

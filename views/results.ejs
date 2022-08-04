@@ -37,6 +37,7 @@
 
   <body style="background-image: url(/images/45-degree-fabric-light.png); background-color: #0d0040;">
     <header id="header" class="d-flex align-items-center header-transparent">
+
       <div class="container-fluid">
 
         <div class="row justify-content-center align-items-center">
@@ -47,10 +48,9 @@
 
             <nav id="navbar" class="navbar">
               <ul>
-                <li><a class="nav-link" href="/">Home</a></li>
-                <li><a class="nav-link active" href="/create">Create Poll</a></li>
+                <li><a class="nav-link" href="/create">Create Poll</a></li>
               </ul>
-              <i class="bi bi-list mobile-nav-toggle"></i>
+
             </nav><!-- .navbar -->
           </div>
         </div>
@@ -60,13 +60,13 @@
 
     <section id="hero" style="background-image: url(/images/45-degree-fabric-light.png); background-color: #0d0040;">
       <div class="jumbotron vertical-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-2">
 
-          </div>
-          <div class="col-8">
-            <form>
+
+
+
+
+
+        <form class="poll-form-container">
               <header class='main-content-header hed'>
                 <% if (results[0].user_name) { %>
                   <div class="col-6">
@@ -122,9 +122,9 @@
                 <p> Thanks for your vote! </p>
               </footer>
             </form>
-          </div>
-        </div>
-      </div>
+
+
+
       </div>
     </section>
   </body>

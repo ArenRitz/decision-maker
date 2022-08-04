@@ -11,6 +11,7 @@
 
   .entry {
 
+
     p {
       margin:1rem;
     }
@@ -45,6 +46,39 @@
 .desc {
   color: gray;
 }
+
+
+
+
+@media (min-width: 769px) {
+  .poll-form-container {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .poll-form-container {
+    width: 100%;
+  }
+
+}
+
+
+
+
+
+
+
+// #choices {
+//   position: relative;
+//   .vote-sum {
+//     position: absolute;
+//     right: 5px;
+//   }
+// }
 
 
 
