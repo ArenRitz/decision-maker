@@ -12,6 +12,7 @@ module.exports = (db, client) => {
     // Submit to create new poll
     let id;
     const poll = req.body;
+    console.log(poll);
     createPoll(db, poll)
       .then((pollId) => {
         id = pollId;

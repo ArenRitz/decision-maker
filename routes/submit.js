@@ -14,6 +14,7 @@ module.exports = (db, client) => {
     getPoll(db, req.params.id)
       .then((data) => {
         const templateVar = { poll: data };
+        console.log(templateVar);
         res.render("submit", templateVar);
         return;
       })
