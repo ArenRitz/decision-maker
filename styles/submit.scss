@@ -113,7 +113,7 @@
 
 
 @media (min-width: 769px) {
-  .container {
+  .form-container {
     width: 80%;
     margin-right: 10%;
     margin-left: 10%;
@@ -122,8 +122,10 @@
 
 
 @media (max-width: 768px) {
-  .container {
+  .form-container {
     width: 100%;
   }
 
 }
+
+
