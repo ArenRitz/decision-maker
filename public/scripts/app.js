@@ -8,20 +8,20 @@ $(function () {
 
     $("#choices").append(
       `
-        <div class="row">
-          <div class="col-6">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control shadow-none choice-container" id="choice-item" name="choices[${count}][title]">
-              <label for="floatingInput">choice title</label>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control shadow-none choice-container" id="choice-description" name="choices[${count}][description]">
-              <label for="floatingInput">choice description</label>
-            </div>
-          </div>
+      <div class="test-flex">
+      <div class="choice-div">
+        <div class="form-floating">
+          <input type="text" class="form-control shadow-none choice-container choice-title" id="choice-item" required="true" name="choices[0][title]">
+          <label for="floatingInput">choice title</label>
         </div>
+      </div>
+      <div class="choice-div">
+        <div class="form-floating ">
+          <input type="text" class="form-control shadow-none choice-container choice-desc" id="choice-description" name="choices[0][description]">
+          <label for="floatingInput">choice description</label>
+        </div>
+      </div>
+    </div>
       `
     );
     count++;

@@ -1,3 +1,6 @@
+
+
+
 #label-checkbox {
   margin-bottom: 10px;
   color: black;
@@ -80,7 +83,6 @@
   border-radius: 20px;
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.25) !important;
   &:hover {
-    cursor: grab;
     border: 3px solid rgb(62, 139, 84);
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.50) !important;
     background-color: rgba(255, 255, 255, 0.50);
@@ -104,8 +106,138 @@
   padding-left: 0.5rem;
   &:hover {
     color: rgb(45, 45, 45);
-background-color:rgb(72, 172, 101);
+    background-color:rgb(72, 172, 101);
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.50);
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 100%;
+
+
+  }
+  .poll-form-container {
+
+    width: 100%;
+
+
+  }
+  .choice-title {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .choice-desc {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+
+  .test-flex {
+    border: 3px solid rgb(83, 198, 115);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    &:hover {
+      border: 3px solid rgb(62, 139, 84);
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.50) !important;
+
+    }
+    &:focus {
+      outline: none;
+      border: 3px solid rgb(62, 139, 84);
+    }
+
+
+
+
+
+
+    .choice-div {
+
+      width: 100%;
+
+      .choice-container {
+        border: none;
+        background-color: rgba(255, 255, 255, 0.50);
+        color: black;
+;
+        margin-bottom: 0rem;
+
+
+
+
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25) !important;
+        &:hover {
+          border: none;
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+        }
+        &:focus {
+          outline: none;
+          border: none;
+          background-color: rgba(255, 255, 255, 0.50);
+        }
+
+      }
+
+
+
+
+
+    }
+  }
+
+
+
+}
+
+
+
+
+
+// *****************************************************************************
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 769px) {
+  .poll-form-container {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .form-container {
+    .test-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      gap: 1rem;
+      .choice-div {
+        flex-grow: 1;
+      }
+
+    }
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+}
+
 
