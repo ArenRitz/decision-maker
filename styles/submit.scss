@@ -2,13 +2,9 @@
   margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
+  width:6%;
 }
-.poll-choices {
-  margin-bottom: 8px;
-  &:hover {
-    cursor: grab;
-  }
-}
+
 .poll-title {
   color: black;
 }
@@ -20,6 +16,7 @@
   color: grey;
 }
 .choice-entry {
+  width:48%;
   background-color: inherit;
   border: none;
   cursor: inherit;
@@ -27,3 +24,94 @@
     outline: none;
   }
 }
+<<<<<<< HEAD
+=======
+
+.choice-container {
+  background-color: rgba(255, 255, 255, 0.50);
+  color: black;
+  border: 3px solid rgb(83, 198, 115);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.35);
+  &:hover {
+    cursor: grab;
+    border: 3px solid rgb(62, 139, 84);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.50);
+  }
+}
+
+.title-container {
+  color: black;
+  text-align: center;
+  margin-top:1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  .title-name {
+    font-size: xx-large;
+    font-weight: bold;
+    width:auto;
+
+
+  }
+  .title-description {
+    margin-top: 0.5rem;
+    margin-bottom:1rem;
+    border-top: 3px solid rgb(83, 198, 115);
+    padding-top: 1rem;
+  }
+}
+
+.name-container {
+  color: black;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+.name-input {
+  margin-left: 0.8rem;
+  background-color: inherit;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: 3px solid rgb(83, 198, 115);
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  &:focus {
+    outline: none;
+  }
+}
+}
+
+
+.main-content-footer {
+
+  .btn-submit {
+    color: rgb(0, 0, 0);
+    background-color:rgb(83, 198, 115);
+    border-radius: 5px;
+    border: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.4rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    &:hover {
+      color: rgb(45, 45, 45);
+
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.50);
+    }
+  }
+  #reset-order {
+    float:right;
+    &:hover {
+      color: black;
+      border-radius: 5px;
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.50);
+    }
+  }
+}
+
+
+>>>>>>> 998febd (Redesign create page)

@@ -22,7 +22,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <!-- Template Main CSS File -->
-    <link rel="stylesheet" href="/styles/submit.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/create.css" type="text/css" />
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js" integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous"></script>
@@ -66,56 +66,56 @@
           <div class="col-8">
             <form action="/create" method="post">
               <header class='main-content-header'>
-                Create Poll
+                <p class="create-title">Create Poll</p>
+                <div class="name-container">
+                  <span> Please enter your name :</span>
+                  <input type="text" class="text-input" id="name" required="true" name="creatorName">
+                </div>
+                <div class="email-container">
+                  <span> Please enter your email :</span>
+                  <input type="email" class="text-input" id="name" required="true" name="creatorEmail">
+                </div>
+
               </header>
 
               <div class ="main-content" id="form-content" >
                 <main>
-
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" required="true" name="creatorName">
-                    <label for="floatingInput">Enter your name here!</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" required="true" name="creatorEmail">
-                    <label for="floatingInput" required>Enter your email here!</label>
-                  </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="checkbox" name="isNameRequired">
+                    <input type="checkbox" class="form-check-input custom-checkbox custom-control-input" id="checkbox" name="isNameRequired">
                     <label class="form-check-label" for="exampleCheck1" id="label-checkbox">Are voters required to submit their name?</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="poll-title" required="true" name="title">
+                    <input type="text" class="form-control shadow-none choice-container" id="poll-title" required="true" name="title">
                     <label for="floatingInput">Poll title</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="poll-description" name="description">
+                    <input type="text" class="form-control shadow-none choice-container" id="poll-description" name="description">
                     <label for="floatingInput">Poll description</label>
                   </div>
                   <div id="choices">
                     <div class="row">
                       <div class="col-6">
                         <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="choice-item" required="true" name="choices[0][title]">
+                          <input type="text" class="form-control shadow-none choice-container" id="choice-item" required="true" name="choices[0][title]">
                           <label for="floatingInput">choice title</label>
                         </div>
                       </div>
                       <div class="col-6">
                         <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="choice-description" name="choices[0][description]">
+                          <input type="text" class="form-control shadow-none choice-container" id="choice-description" name="choices[0][description]">
                           <label for="floatingInput">choice description</label>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <button type="button" class= "btn btn-success" id="add-entry">+ Add Choice</button>
-
+                  <div class="row justify-content-center">
+                    <button type="button" class= "btn" id="add-entry"><i class="fa-solid fa-plus"></i></button>
+                  </div>
                 </main>
               </div>
               <footer class='main-content-footer'>
-                <button class="btn btn-primary" id="create-button" type="submit">Create Poll</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
+                <button class="btn btn-submit" id="create-button" type="submit">Create Poll</button>
+                <button type="reset" class="btn btn-secondary btn-reset">Reset</button>
               </footer>
             </form>
           </div>

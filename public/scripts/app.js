@@ -11,13 +11,13 @@ $(function () {
         <div class="row">
           <div class="col-6">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="choice-item" name="choices[${count}][title]">
+              <input type="text" class="form-control shadow-none choice-container" id="choice-item" name="choices[${count}][title]">
               <label for="floatingInput">choice title</label>
             </div>
           </div>
           <div class="col-6">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="choice-description" name="choices[${count}][description]">
+              <input type="text" class="form-control shadow-none choice-container" id="choice-description" name="choices[${count}][description]">
               <label for="floatingInput">choice description</label>
             </div>
           </div>

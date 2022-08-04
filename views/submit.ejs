@@ -70,62 +70,64 @@
           <div class="col-2">
 
           </div>
-          <div class="col-8">
+          <div class="col-8 main-container-div">
             <header class='main-content-header'>
-              Submit your response
+              <div class='col title-container'>
+                <div class="title-name">
+                  <span>
+                    <%= poll.question %>
+                  </span>
+                </div>
+
+                <% if (poll.description) { %>
+                  <div class="title-description desc">
+                    <p>
+                      <%= poll.description %>
+                    </p>
+                  </div>
+                  <% } %>
+              </div>
             </header>
 
 
-            <form method="post" action="<%= poll.pollId %>" >
-            <div class="main-content">
-              <section>
+            <form method="post" action="<%= poll.pollId %>">
+              <div class="main-content">
+                <section>
 
-                <% if (poll.nameRequired) { %>
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" required="true" name="creatorName">
-                    <label for="floatingInput">Enter your name here!</label>
-                  </div>
-                  <% } %>
-
-
-                    <div class="poll-title">
-                      <h3>
-                        <%= poll.question %>
-                      </h3>
-                      <p>
-                        <%= poll.description %>
-                      </p>
+                  <% if (poll.nameRequired) { %>
+                    <div class="name-container">
+                      <span> Please enter your name :</span>
+                      <input type="text" class="name-input" id="name" required="true" name="creatorName">
                     </div>
-                    <div id="sort" class="list-group">
-                      <% let i=1; %>
-                      <% for (let choice of poll.choices) { %>
+                    <% } %>
 
-                          <div data-id="<%= i %>">
-                            <li class="list-group-item d-flex justify-content-between align-items-start poll-choices">
-                              <div class="ms-2 me-auto">
+
+                      <div id="sort">
+                        <% let i=1; %>
+                          <% for (let choice of poll.choices) { %>
+
+                            <div class="choice-container row" data-id="<%= i %>">
+
+                              <div class="drag-icon-container col-1"> <i class="fa-solid fa-bars"></i> </div>
+
+                              <div class="col poll-choices">
                                 <div class="choice-title" data-id="<%=i%>">
                                   <input class="choice-entry" type="text" name="choice<%= choice.choiceId %>" value="<%= choice.title %>" readonly></input>
-                                  <br>
+
                                   <input class="choice-entry choice-description" type="text" value="<%= choice.description %>" readonly></input>
                                 </div>
-
-
-                              </div>
-                              <div class="drag-icon-container">
-                                <i class="fa-solid fa-bars"></i>
                               </div>
 
-                            </li>
-                          </div>
-                        <% i += 1; %>
-                          <% } %>
-                    </div>
-              </section>
-            </div>
-            <div class='main-content-footer'>
-              <button type="submit" class="btn btn-primary">Submit Poll</button>
-              <button type="button" id="reset-order" class="btn btn-secondary">Reset Poll</button>
-            </div>
+                            </div>
+                            <% i +=1; %>
+                              <% } %>
+                      </div>
+                </section>
+              </div>
+              <div class='main-content-footer'>
+                <button type="submit" class="btn-submit">Submit Poll</button>
+                <button type="button" id="reset-order" class="btn btn-secondary">Reset Poll</button>
+              </div>
             </form>
           </div>
 

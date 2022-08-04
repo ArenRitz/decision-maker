@@ -50,6 +50,15 @@ h6 {
   padding: 0;
 }
 
+.main-content-footer {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main-content-header {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
 @-webkit-keyframes animate-preloader {
   0% {
     transform: rotate(0deg);
@@ -299,4 +308,9 @@ h6 {
 .main-content-footer {
   padding: 10px 20px;
   //text-align: center;
+}
+
+
+#hero {
+  margin-top:5rem;
 }

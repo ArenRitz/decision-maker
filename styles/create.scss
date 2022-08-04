@@ -1,4 +1,110 @@
 #label-checkbox {
   margin-bottom: 10px;
   color: black;
+
+}
+
+
+#checkbox {
+  &:checked {
+    color: rgb(83, 198, 115);
+  }
+}
+
+
+.name-container,
+.email-container {
+  color: black;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+
+  .text-input {
+    margin-left: 0.8rem;
+    background-color: inherit;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 3px solid rgb(83, 198, 115);
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+.create-title {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-reset {
+  float: right;
+  &:hover {
+    border-radius: 5px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.50);
+  }
+}
+
+
+#add-entry {
+  width: auto;
+  color: rgb(0, 0, 0);
+  background-color: rgb(83, 198, 115);
+  border-radius: 30px;
+  border: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.4rem;
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
+
+  &:hover {
+    background-color:rgb(72, 172, 101);
+    color: rgb(58, 57, 57);
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.50);
+  }
+}
+
+
+
+.choice-container {
+  background-color: rgba(255, 255, 255, 0.50);
+  color: black;
+  border: 3px solid rgb(83, 198, 115);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.25) !important;
+  &:hover {
+    cursor: grab;
+    border: 3px solid rgb(62, 139, 84);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.50) !important;
+    background-color: rgba(255, 255, 255, 0.50);
+  }
+  &:focus {
+    outline: none;
+    border: 3px solid rgb(62, 139, 84);
+    background-color: rgba(255, 255, 255, 0.50);
+  }
+
+}
+
+.btn-submit {
+  color: rgb(0, 0, 0);
+  background-color:rgb(83, 198, 115);
+  border-radius: 5px;
+  border: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.4rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  &:hover {
+    color: rgb(45, 45, 45);
+background-color:rgb(72, 172, 101);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.50);
+  }
 }
